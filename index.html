@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Ache um Emprego - TCC ETEC</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+        <link rel="icon" href="Imagens/logo_tcc.png" type="imagem/png">
+
+        <script type="text/javascript"> 
+    
+            function ler_pagina() {
+            
+                var qs = (function(a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i)
+                {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                b[p[0]] = "";
+                else
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+                })(window.location.search.substr(1).split('&'));
+        
+                var varGet1 = qs["pag_dir"];
+                if(varGet1 != "" && varGet1 != " " && varGet1 != null  && varGet1 != undefined) {
+                    document.write("<div data-include='" + varGet1 + "'></div>")
+                }
+                else document.write("<div data-include='home'></div>")
+            }
+        </script>
+    
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        
+        <!-- Estilo adicional -->
+        <link rel="stylesheet" type="text/css" href="adicao.css">
+    </head>
+
+    <body class="text-center text-light bg-image" style="background-image: url('Imagens/background.png'); background-size: cover;">
+
+    <div data-include="nav_bar" class="container mb-3"></div>
+
+    <script>ler_pagina();</script>
+        
+    <footer data-include="footer"></footer> 
+    
+    <!-- Contact Dialog Box -->
+    <!--<div class="modal fade" id="Modal_Contact" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-green">
+            <div class="modal-header">
+            <h5 class="modal-title">Contact</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-unstyled text-small">
+                <li><img src="Imagens/discord_icon.png" style="border-radius: 5px;" alt="Discord" height="24"> - Perfect Scrash#1400</li>
+                <li><a class="text-decoration-none text-white" href="https://steamcommunity.com/id/perfectscrash" target="_blank"><img src="Imagens/Steam-Logo.png" alt="Allied Profile" height="24"> - [P]erfect [S]crash</a></li>
+                <li><img src="Imagens/skype_logo.png" alt="Skype" height="24"> - perfect.scrash</li>
+                <li><a class="text-decoration-none text-white" href="https://github.com/PerfectScrash" target="_blank"><img src="Imagens/GitHub-Mark-Light-120px-plus.png" alt="Github" height="24"> - Github Profile</a></li>
+                <li><a class="text-decoration-none text-white" href="https://forums.alliedmods.net/member.php?u=236184" target="_blank"><img src="Imagens/allied_logo.png" alt="Allied Profile" height="24"> - Allied Profile</a></li>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Modal_Donate" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-green">
+            <div class="modal-header">
+            <h3 class="modal-title">Thank you for download</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="Imagens/scrash.gif" class="w-75" alt="Donate">
+
+                <p>Did you like it this gameplay?<br/>
+                You can encourage my work by making a donation.</p>
+
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A8RJPHR3T8P6Y" class="btn btn-primary" target="_blank">Donate</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div> -->
+
+    
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"> 
+        $(function() {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        }); 
+    </script> 
+    </body>
+</html>
